@@ -15,7 +15,8 @@ void ofApp::setup(){
 	displacementImg2.loadImage("Displacement2.png");
 	framebuffer.allocate(1400, 766, GL_RGBA);
 	framebuffer2.allocate(1400, 766, GL_RGBA);
-	videoPlayer.load("Istwen.mov");
+	if (PLAYVIDEO)
+		videoPlayer.load("Istwen.mov");
 	font.load("trench.ttf", 24);
 	ofBackground(1);
 	if (FULLSCREEN)
@@ -112,7 +113,10 @@ void ofApp::draw(){
 	framebuffer.draw(0,0, 1400, 766);
 	distortion.end();
 	if (increment >= 20)
+	{
 		index++;
+		increment = 0;
+	}
 	increment++;
 }
 

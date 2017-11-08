@@ -6,7 +6,7 @@
 #define TIMEOUT 35
 #define TIMEOUTRANDOM 165
 #define FULLSCREEN true
-#define PLAYVIDEO true
+#define PLAYVIDEO false
 #define PI 3.14159265
 
 class ofApp : public ofBaseApp{
